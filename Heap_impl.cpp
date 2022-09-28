@@ -32,7 +32,7 @@ int Heap::Left_Son(int i) // int 'i' is the object of the function, the parent o
     {
         return -1; // function will return -1, indicating that the node is out of range
     }
-}
+};
 
 // Function that returns the index of the right son of node 'i'
 // Function also checks to verify that the son fits into the size of the tree
@@ -49,7 +49,7 @@ int Heap::Right_Son(int i) // int 'i' is the object of the function, the parent 
     {
         return -1; // function will return -1, indicating that the node is out of range
     }
-}
+};
 
 
 // Function that returns the index of the parent of node 'i'
@@ -65,7 +65,7 @@ int Heap::Parent(int i) // int 'i' is the object of the function, the parent of 
     {
         return (i/2); // function will return the index of the parent
     }
-}
+};
 
 // Function that swaps the nodes
 int Heap::Swap(int i, int j) // the two nodes in this case are i and j
@@ -83,7 +83,7 @@ int Heap::Swap(int i, int j) // the two nodes in this case are i and j
     {
         return -1; // function returns -1 to show failure
     }
-}
+};
 
 // Function that adds in a new element 
 int Heap::push(int x)
@@ -104,20 +104,20 @@ int Heap::push(int x)
             nextFreeSlot = Parent(x); // The parent node becomes the next slot
             return 0; // function is successful
         }
+        return 0;
     }
     // Case where the array is full
     else
     {
         return -1; // Function returns -1 to show failure
     }
-}
+};
 
 // Displays the data of the nodes
-string Heap::toString()
+void Heap::toString()
 {
     for (int num = 0; num < Size_of_the_Tree; num++) // function repeats until the tree is completed
     {
         cout << "[" << data[num] << "]" << ", "; // data of each element is presented
     }
-    return 0;
-}
+};

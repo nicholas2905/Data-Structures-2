@@ -11,12 +11,6 @@ Heap::Heap(int n)
     nextFreeSlot = 1;
 };
 
-// Function that deletes data in order to free up dynamic memory 
-Heap::~Heap()
-{
-    delete data; // deleting the array
-};
-
 // Function that returns the index of the left son of node 'i'
 // Function also checks to verify that the son fits into the size of the tree
 int Heap::Left_Son(int i) // int 'i' is the object of the function, the parent of the son node
@@ -50,7 +44,6 @@ int Heap::Right_Son(int i) // int 'i' is the object of the function, the parent 
         return -1; // function will return -1, indicating that the node is out of range
     }
 };
-
 
 // Function that returns the index of the parent of node 'i'
 int Heap::Parent(int i) // int 'i' is the object of the function, the parent of the son node
@@ -112,6 +105,13 @@ int Heap::push(int x)
         return -1; // Function returns -1 to show failure
     }
 };
+
+// Function that deletes data in order to free up dynamic memory 
+Heap::~Heap()
+{
+    delete data; // deleting the array
+};
+
 
 // Displays the data of the nodes
 void Heap::toString()

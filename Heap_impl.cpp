@@ -112,7 +112,6 @@ Heap::~Heap()
     delete data; // deleting the array
 };
 
-
 // Displays the data of the nodes
 void Heap::toString()
 {
